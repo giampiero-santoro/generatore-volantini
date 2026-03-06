@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Work+Sans:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+@media print {
+  .print\:hidden { display: none !important; }
+  .print\:block { display: block !important; }
+  .print\:p-0 { padding: 0 !important; }
+  .print\:shadow-none { box-shadow: none !important; }
+  
+  @page { size: auto; margin: 0; }
+  
+  .format-a3 { width: 297mm; min-height: 420mm; }
+  .format-a4 { width: 210mm; min-height: 297mm; }
+  .format-b5 { width: 176mm; min-height: 250mm; }
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
